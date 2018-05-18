@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Essence
+Comment=Essence P2P Cryptocurrency
+Exec=essence-qt %u
+Terminal=false
+Type=Application
+Icon=essence128
+MimeType=x-scheme-handler/essence;
+Categories=Office;Finance;
+Name[en_US]=essence-qt.desktop

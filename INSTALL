@@ -1,0 +1,17 @@
+Building Essence Core
+
+Use the autogen script to prepare the build environment.
+
+	chmod +x autogen.sh
+    ./autogen.sh
+    ./configure
+    chmod +x share/genbuild.sh
+	make
+
+Precompiled binaries are available at github, see
+https://github.com/essencecoin/releases
+
+
+See doc/build-*.md for instructions on building essenced,
+the intended-for-services, no-graphical-interface, reference
+implementation of Essence.

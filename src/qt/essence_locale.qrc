@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/essence_bg.qm</file>
+        <file alias="de">locale/essence_de.qm</file>
+        <file alias="en">locale/essence_en.qm</file>
+        <file alias="es">locale/essence_es.qm</file>
+        <file alias="fi">locale/essence_fi.qm</file>
+        <file alias="fr">locale/essence_fr.qm</file>
+        <file alias="it">locale/essence_it.qm</file>
+        <file alias="ja">locale/essence_ja.qm</file>
+        <file alias="pl">locale/essence_pl.qm</file>
+        <file alias="pt">locale/essence_pt.qm</file>
+        <file alias="ru">locale/essence_ru.qm</file>
+        <file alias="sk">locale/essence_sk.qm</file>
+        <file alias="sv">locale/essence_sv.qm</file>
+        <file alias="vi">locale/essence_vi.qm</file>
+        <file alias="zh_CN">locale/essence_zh_CN.qm</file>
+        <file alias="zh_TW">locale/essence_zh_TW.qm</file>
+    </qresource>
+</RCC>

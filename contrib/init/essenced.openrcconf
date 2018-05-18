@@ -1,0 +1,33 @@
+# /etc/conf.d/essenced: config file for /etc/init.d/essenced
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/essencecore/essence.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/essenced"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/essenced.pid"
+
+# Where to write essenced data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/essenced"
+
+# User and group to own essenced process
+#BITCOIND_USER="essencecore"
+#BITCOIND_GROUP="essencecore"
+
+# Path to essenced executable
+#BITCOIND_BIN="/usr/bin/essenced"
+
+# Nice value to run essenced under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for bitcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BITCOIND_SIGTERM_TIMEOUT=60

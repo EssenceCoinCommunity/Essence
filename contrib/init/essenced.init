@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  essenced The Essence Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: essenced
+# processname: essenced
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/essenced, see below
+if [ -f /etc/sysconfig/essenced ]; then
+        . /etc/sysconfig/essenced
+fi
+
+RETVAL=0
+
+prog=essenced
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/essenced
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/essenced}
+
+# essenced defaults to /usr/bin/essenced, override with BITCOIND_BIN
+essenced=${BITCOIND_BIN-/usr/bin/essenced}
+
+# essenced opts default to -disablewallet, override with BITCOIND_OPTS
+essenced_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $essenced $essenced_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

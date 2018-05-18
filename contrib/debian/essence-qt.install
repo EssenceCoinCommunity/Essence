@@ -1,0 +1,6 @@
+usr/local/bin/essence-qt usr/bin
+share/pixmaps/essence32.xpm usr/share/pixmaps
+share/pixmaps/essence16.xpm usr/share/pixmaps
+share/pixmaps/essence128.png usr/share/pixmaps
+debian/essence-qt.desktop usr/share/applications
+debian/essence-qt.protocol usr/share/kde4/services/
